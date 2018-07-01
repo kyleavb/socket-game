@@ -1,0 +1,17 @@
+{
+  "development": {
+    "database": "crestfall",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "database": "crestfall",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "crestfall",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
