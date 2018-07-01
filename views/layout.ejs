@@ -2,8 +2,52 @@
 <html>
     <head>
         <title>Crestfall: Castor</title>
+        <link rel="icon" type="image/png" href="img/favico.png" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet">
+        <link rel='stylesheet' href='css/style.css'>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+        <script src='js/script.js'></script>
     </head>
     <body>
-        <%- body %>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper orange lighten-2">
+                    <div class='logobox'>
+                        <a href="/"><img src="img/titlebarlogo.png" class="brand-logo center responsive-img"></a>
+                    </div>
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                        <li><a href="/">Home</a></li>
+                        <% if(currentUser){ %> 
+                            <li><a href="/game">Enter Castor!</a></li>
+                        <% }else{ %>
+                            <li><a href="/signup">Signup</a></li>
+                        <% } %>
+                    </ul>
+                    <ul class='right'>
+                        <li><a href="/about">About</a></li>
+                        <% if(currentUser){ %>
+                            <ul id="profileDrop" class="dropdown-content">
+                                <li><a href="/profile">Profile</a></li>
+                                <li><a href="/auth/logout">Logout</a></li>
+                            </ul>
+                            <li><a class="dropdown-trigger" href="#!" data-target="profileDrop"><%= currentUser.user_name %><i class="material-icons right">arrow_drop_down</i></a></li>
+                        <% }else{ %>
+                            <li><a href="/login">Login</a></li>
+                        <% } %>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class=''>
+            <% include partials/alerts %>
+            <%- body %>
+        </div>
     </body>
 </html>
+
+
+    <!-- Compiled and minified JavaScript -->
+    

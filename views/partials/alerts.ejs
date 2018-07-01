@@ -1,0 +1,22 @@
+<% if(alerts.error) { %>
+    <% alerts.error.forEach(function(msg){ %>
+        <script>M.toast({
+            html: "<%= msg %>",
+            displayLength: 4000,
+            classes: "red center"
+            });
+        </script>
+    <% }) %>
+  <% } %>
+  
+  
+  <% if(alerts.success) { %>
+    <% alerts.success.forEach(function(msg){ %>
+        <script>M.toast({
+            html:"<%= msg %>", 
+            displayLength: 4000, 
+            classes: "green center"
+            });
+        </script>
+    <% }) %>
+  <% } %>

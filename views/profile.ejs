@@ -1,0 +1,20 @@
+<h1>Hello <%= currentUser.user_name %></h1>
+<h2>User Info</h2>
+<hr />
+<div class='row'>
+    <div class='col s12 m6'>
+        <strong><p>First Name: </p></strong><p><%= currentUser.first_name %></p>
+    </div>
+    <div class='col s12 m6'>
+        <strong><p>Last Name: </p></strong><p><%= currentUser.last_name %></p>
+    </div>
+</div>
+<div class='row'>
+    <div class='col s12 m6'>
+        <strong><p>User Name: </p></strong><p><%= currentUser.user_name %></p>
+    </div>
+    <div class='col s12 m6'>
+        <strong><p>Email: </p></strong><p><%= currentUser.email %></p>
+    </div>
+</div>
+<a class='btn orange lighten-2' href='/auth/logout'>Logout</a>

@@ -1,0 +1,18 @@
+body{
+    background: rgb(232, 232, 232);
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+h1{
+    text-align: center;
+}
+.profileDrop{
+    position: relative;
+    top: 30px;
+}
+.content{
+    padding: 2em 2em;
+}
+.dropdown-content{
+    background: #fb8c00;
+}
+
