@@ -18,7 +18,28 @@
                     <div class='logobox'>
                         <a href="/"><img src="img/titlebarlogo.png" class="brand-logo center responsive-img"></a>
                     </div>
-                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <ul>
+                        <li><a class="dropdown-trigger show-on-small hide-on-med-and-up" href="#!" data-target="mobileNav"><i class="material-icons right">menu</i></a></li>
+                    </ul>
+                    <ul id="mobileNav" class="dropdown-content">
+                        <li><a href="/">Home</a></li>
+                        <% if(currentUser){ %> 
+                            <li><a href="/game">Enter Castor!</a></li>
+                        <% }else{ %>
+                            <li><a href="/signup">Signup</a></li>
+                        <% } %>
+                        <li><a href="/about">About</a></li>
+                        <% if(currentUser){ %>
+                            <ul id="profileDrop" class="dropdown-content">
+                                <li><a href="/profile">Profile</a></li>
+                                <li><a href="/auth/logout">Logout</a></li>
+                            </ul>
+                            <li><a class="dropdown-trigger" href="#!" data-target="profileDrop"><%= currentUser.user_name %><i class="material-icons right">arrow_drop_down</i></a></li>
+                        <% }else{ %>
+                            <li><a href="/login">Login</a></li>
+                        <% } %>
+                    </ul>
+                    <ul id="nav-mobile" class="left hide-on-small-and-down">
                         <li><a href="/">Home</a></li>
                         <% if(currentUser){ %> 
                             <li><a href="/game">Enter Castor!</a></li>
@@ -26,7 +47,7 @@
                             <li><a href="/signup">Signup</a></li>
                         <% } %>
                     </ul>
-                    <ul class='right'>
+                    <ul class='right hide-on-small-and-down'>
                         <li><a href="/about">About</a></li>
                         <% if(currentUser){ %>
                             <ul id="profileDrop" class="dropdown-content">
@@ -48,6 +69,3 @@
     </body>
 </html>
 
-
-    <!-- Compiled and minified JavaScript -->
-    

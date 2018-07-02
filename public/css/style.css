@@ -15,4 +15,9 @@ h1{
 .dropdown-content{
     background: #fb8c00;
 }
-
+.linkbox{
+    margin: 3em;
+}
+.linkbox > a{
+    margin: 0 2em;
+}
